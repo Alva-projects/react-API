@@ -15,17 +15,16 @@ function Joke () {
     };
     useEffect(() => {fetchData();}, [])
   return(
-    <div className="div-joke">
+    <>
         <h1 className="title-joke">Joke generator</h1>
-        <div className="container-joke">
-            <p>
-                {joke.setup}
-            </p>
-            <p> {joke.punchline}</p>
+        <div className="div-joke">
+            <div className="container-joke">
+                <p>{joke.setup}</p>
+                <p> {joke.punchline}</p>
+            </div>
         </div>
-        <button className="btn btn-joke" onClick={fetchData}>New joke</button>
-    </div>
-
+                <button className="btn btn-joke" onClick={fetchData}>New joke</button>
+    </>
   );  
 };
 

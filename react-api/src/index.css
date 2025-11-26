@@ -1,0 +1,7 @@
+body {
+    background-color: rgb(194, 221, 255);
+}            
+
+.btn:hover {
+    transform: scale(1.06);
+}

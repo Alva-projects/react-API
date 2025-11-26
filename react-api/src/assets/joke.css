@@ -1,7 +1,8 @@
 .container-joke {
-    border: 2px solid;
+    border: 1px solid;
     width: 60%;
     font-size: 20px;
+    background-color: white;
 }
 
 .title-joke {
@@ -10,4 +11,9 @@
 
 * {
     font-family: sans-serif;
+}
+
+.div-joke {
+    display: flex;
+    justify-content: center;
 }

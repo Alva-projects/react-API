@@ -11,7 +11,7 @@ import "./counter.css"
 
 function Counter() {
     const [count, setCount] = useState(0);
-    const [color, setColor] = useState("red");
+    const [color, setColor] = useState("blue");
     const colors = ["red", "orange", "yellow", "blue", "indigo", "violet"]
     const changeColor = () => {
         setColor((current) => {
@@ -34,12 +34,12 @@ function Counter() {
             </div>
             <div className="buttons">
                 <div className="add">
-                    <button className="btn btn-add" onClick={() => setCount((c) => c + 1)}>Add 1</button>
-                    <button className="btn btn-sub" onClick={() => setCount((c) => c + 5)}>Add 5</button>
+                    <button className="btn btn-add" onClick={() => setCount((c) => c + 2)}>Add 2</button>
+                    <button className="btn btn-sub" onClick={() => setCount((c) => c + 10)}>Add 10</button>
                 </div>
                 <div className="sub">
-                    <button className="btn btn-sub" onClick={() => setCount((c) => c + - 1)}>Subtract 1</button>
-                    <button className="btn btn-sub" onClick={() => setCount((c) => c + - 5)}>Subtract 5</button>
+                    <button className="btn btn-sub" onClick={() => setCount((c) => c + - 2)}>Subtract 2</button>
+                    <button className="btn btn-sub" onClick={() => setCount((c) => c + - 10)}>Subtract 10</button>
                 </div>
             </div>
                 <button className="btn btn-reset" onClick={() => setCount((c) => 0)}>Reset counter</button>
