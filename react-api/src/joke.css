@@ -1,0 +1,13 @@
+.container-joke {
+    border: 2px solid;
+    width: 60%;
+    font-size: 20px;
+}
+
+.title-joke {
+    font-size: 35px;
+}
+
+* {
+    font-family: sans-serif;
+}
