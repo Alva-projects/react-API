@@ -1,6 +1,6 @@
 import './App.css'
 import Counter from './assets/Counter.jsx';
-import Joke from './JokeAPI.jsx';
+import Joke from './assets/JokeAPI.jsx';
 function App() {
 
   return (

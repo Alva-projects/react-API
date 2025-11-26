@@ -7,7 +7,7 @@
 
 import React from "react";
 import { useEffect, useState } from "react";
-import "../counter.css"
+import "./counter.css"
 
 function Counter() {
     const [count, setCount] = useState(0);
@@ -29,7 +29,8 @@ function Counter() {
             <div className="funny-meter">
                 <p className="counter" style={{backgroundColor: color}}>
                     Funny-meter: {count}</p>
-                    <p>How funny was the joke? How many jokes are needed to reach 100 on the Funny-meter?</p>
+                    <p>How funny was the joke?  
+                        Rate the jokes! How many jokes are needed to reach 100 on the Funny-meter?</p>
             </div>
             <div className="buttons">
                 <div className="add">

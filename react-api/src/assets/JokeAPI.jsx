@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../src/joke.css"
+import "./joke.css"
 
 function Joke () {
     const [joke, setJoke] = useState([]);
