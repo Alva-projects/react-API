@@ -4,17 +4,19 @@ import { useEffect, useState } from "react";
 function Form () {
 
 const [username, setUsername] = useState("");
+const [list, setList] = useState([]);
 const addUsername = () => {
     localStorage.setItem("usernameKey", username);
-    setUsername(" ");
-    setList((l) => [...l, username]);
+    setUsername("");
+    setList((l) => [...l, localStorage.getItem("usernameKey")]);
     }
+    const clearList = () => {
+        localStorage.clear();
+    }
+useEffect(() => {
+        setList([localStorage.getItem("usernameKey")]);
+}, []);
 
-const [password, setPassword] = useState("");
-const addPassword = () => {
-    localStorage.setItem("passwordKey", password);
-    setPassword(" ");
-    }
 
     return(
         <>
@@ -30,14 +32,7 @@ const addPassword = () => {
                         <li usernameKey={index}>{item}</li>
                     ))}
                 </ul>
-                <input className="input" placeholder="Password" type="text" value={password} onChange={(e) => setPassword(e.target.value)} />
-                <br/>
-                <button onClick={addPassword} className="btn-sign-up">Sign Up</button>
-                <ul>
-                    {list.map((item, index) => (
-                        <li passwordKey={index}>{item}</li>
-                    ))}
-                </ul>
+                <button onClick={clearList}>Clear list</button>
             </div>
             <div className="sign-in">
                 <p>Sign In</p>
