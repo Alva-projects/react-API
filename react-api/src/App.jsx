@@ -1,12 +1,16 @@
 import './App.css'
-import Counter from './assets/Counter.jsx';
-import Joke from './assets/JokeAPI.jsx';
+import Game from "./pages/Game.jsx"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 function App() {
 
   return (
     <>
-      <Counter/>
-      <Joke/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Game/>} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
