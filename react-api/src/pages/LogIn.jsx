@@ -1,8 +1,12 @@
-import  "../form.css"
+import  "../form.css";
+import SignUp from "./SignUp";
 
 function LogIn () {
+const username = SignUp.username
+const password = SignUp.password
     return(
         <>
+
             <h2>Welcome!</h2>
             <div className="sign-in">
                 <p>Sign In</p>
@@ -11,8 +15,9 @@ function LogIn () {
                 <br/>
                 <button className="btn-sign-in">Sign In</button>
             </div>
-        </>
+    </>
+    
     )
 }
-
+console.log()
 export default LogIn;

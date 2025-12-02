@@ -38,8 +38,8 @@ function Counter() {
                     <button className="btn btn-sub" onClick={() => setCount((c) => c + 10)}>Add 10</button>
                 </div>
                 <div className="sub">
-                    <button className="btn btn-sub" onClick={() => setCount((c) => c + - 30)}>Subtract 30</button>
-                    <button className="btn btn-sub" onClick={() => setCount((c) => c + - 10)}>Subtract 10</button>
+                    <button className="btn btn-sub" onClick={() => setCount((c) => c - 30)}>Subtract 30</button>
+                    <button className="btn btn-sub" onClick={() => setCount((c) => c - 10)}>Subtract 10</button>
                 </div>
             </div>
                 <button className="btn btn-reset" onClick={() => setCount((c) => 0)}>Reset counter</button>
