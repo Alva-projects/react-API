@@ -1,49 +1,45 @@
 import { useEffect, useState } from "react";
 import  "../form.css"
 
-
 function SignUp() {
     const [username, setUsername] = useState("");
-    const [list, setList] = useState([]);
-    const addUsername = () => {
-    localStorage.setItem("usernameKey", username);
-    setUsername("");
-    setList((l) => [...l, localStorage.getItem("usernameKey")]);
-    }
-
-    useEffect(() => {
-        setList([localStorage.getItem("usernameKey")]);
-}, []);
     const [password, setPassword] = useState("");
-    const addPassword = () => {
+
+    const addUser = () => {
+    localStorage.setItem("usernameKey", username);
     localStorage.setItem("passwordKey", password);
+
+    setUsername("");
     setPassword("");
-    }
+    alert("User has been saved")
+
+
+    }; 
 
     return(
         <>
             <h2>Sign Up here</h2>
             <div className="sign-up">
-                {/*Username sign up*/}
-                <input className="input" placeholder="Username" type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+
+                <input 
+                className="input" 
+                placeholder="Username" 
+                type="text" 
+                value={username} 
+                onChange={(e) => setUsername(e.target.value)} 
+                />
                 <br/>
-                <button onClick={addUsername} className="btn-sign-up">Sign Up</button>
+
+                <input 
+                className="input" 
+                placeholder="Password" 
+                type="text" 
+                value={password} 
+                onChange={(p) => setPassword(p.target.value)} 
+                />
+
                 <br/>
-                <ul>
-                    {list.map((item, index) => (
-                        <li usernameKey={index}>{item}</li>
-                ))}
-                </ul>
-                
-                {/*Password sign up*/}
-                <input className="input" placeholder="Password" type="text" value={password} onChange={(p) => setPassword(p.target.value)} />
-                <br/>
-                <button onClick={addPassword} className="btn-sign-up">Sign Up</button>
-                <ul>
-                    {list.map((item, index) => (
-                        <li passwordKey={index}>{item}</li>
-                    ))}
-                </ul>
+                <button onClick={addUser} className="btn-sign-up">Sign Up</button>
             </div>
         </>
     )
