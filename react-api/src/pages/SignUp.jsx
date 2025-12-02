@@ -9,11 +9,8 @@ function SignUp() {
     localStorage.setItem("usernameKey", username);
     setUsername("");
     setList((l) => [...l, localStorage.getItem("usernameKey")]);
-
-    
-
     }
-    
+
     useEffect(() => {
         setList([localStorage.getItem("usernameKey")]);
 }, []);
@@ -25,10 +22,10 @@ function SignUp() {
 
     return(
         <>
-            <p>Sign Up</p>
+            <h2>Sign Up here</h2>
             <div className="sign-up">
                 {/*Username sign up*/}
-                <input className="input" placeholder="Username" type="text" value={username} onChange={(u) => setUsername(u.target.value)} />
+                <input className="input" placeholder="Username" type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
                 <br/>
                 <button onClick={addUsername} className="btn-sign-up">Sign Up</button>
                 <br/>

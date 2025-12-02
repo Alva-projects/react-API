@@ -9,7 +9,7 @@ const password = SignUp.password
 
             <h2>Welcome!</h2>
             <div className="sign-in">
-                <p>Sign In</p>
+                <p>Log In</p>
                 <input className="input" placeholder="Username" type="text" />
                 <input className="input" placeholder="Password" type="text" />
                 <br/>
