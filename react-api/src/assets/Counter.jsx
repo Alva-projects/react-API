@@ -20,9 +20,11 @@ function Counter() {
             return colors[nextColor];
         });
     }
-    useEffect(() => {
-        document.title = `Count: ${count}, ${color}`
-    }, [count, color]);
+    
+        if (count >= 100){
+        alert ("The funny-meter reached 100 points- You must have laughed so much then!")
+        setCount((c) => 0)
+    }
 
     return(
         <div className="container-counter">

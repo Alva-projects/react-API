@@ -19,6 +19,7 @@ function SignUp() {
     return(
         <>
             <h2>Sign Up here</h2>
+            <p>You must sign up and log in to play the game.</p>
             <div className="sign-up">
 
                 <input 
@@ -33,7 +34,7 @@ function SignUp() {
                 <input 
                 className="input" 
                 placeholder="Password" 
-                type="text" 
+                type="password" 
                 value={password} 
                 onChange={(p) => setPassword(p.target.value)} 
                 />
