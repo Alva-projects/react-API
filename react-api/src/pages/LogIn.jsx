@@ -1,6 +1,6 @@
 import  "../form.css"
 
-function Form () {
+function LogIn () {
     return(
         <>
             <h2>Welcome!</h2>
@@ -15,4 +15,4 @@ function Form () {
     )
 }
 
-export default Form;
+export default LogIn;

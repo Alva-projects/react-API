@@ -1,0 +1,10 @@
+.nav.items {
+    list-style-type: none;
+    margin: 10px;
+    text-decoration: none;
+    background-color: blue;
+}
+
+a {
+    margin: 30px;
+}
